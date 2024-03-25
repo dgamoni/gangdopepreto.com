@@ -37,7 +37,48 @@ function add_custom_css() {
 	global $current_user;
 	?>
 	<script>
+
+	jQuery(window).load(function() {
+
+function getNatural($mainImage) {
+    var mainImage = $mainImage[0],
+        d = {};
+
+    if (mainImage.naturalWidth === undefined) {
+        var i = new Image();
+        i.src = mainImage.src;
+        d.oWidth = i.width;
+        d.oHeight = i.height;
+    } else {
+        d.oWidth = mainImage.naturalWidth;
+        d.oHeight = mainImage.naturalHeight;
+    }
+    return d;
+}
+
+	    jQuery('.slideshow-slide img').each(function() {
+	    	var href = jQuery(this).attr('src');
+	    	//console.log(href);
+			var img = jQuery(this);
+			var naturalDimension = getNatural(img);
+			//console.log(naturalDimension.oWidth);
+			//console.log(naturalDimension.oHeight);
+			var width = naturalDimension.oWidth;
+			var height = naturalDimension.oHeight;
+
+	        if(width < height){
+	        	//console.log('yes');
+	        	jQuery(this).addClass('vertical_image');
+	        } else {
+	        	//console.log('no');
+	        }
+	     });		
+	});
+
+
 		jQuery(document).ready(function($) {
+
+
 
 // $("#ex4").slider({
 //     ticks: [1, 2, 3, 4, 5],
@@ -53,6 +94,84 @@ function add_custom_css() {
 		});
 	</script>
 	<style>
+.slideshow-slide img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+.slideshow-slide img.vertical_image {
+    object-fit: contain;
+}
+.post-add .text-container {
+	display: none;
+}
+.post-add.post-grid {
+	background-color: white;
+}
+.post-add  .post-grid-content {
+	    text-align: center;
+    top: 18%;
+}
+.post-add.post-grid:hover .post-grid-content {
+    background: inherit;
+}
+.post-cover-inside .edit-link {
+	display: none;
+}
+
+.has-post-thumbnail .page-cover-inside  {
+    position: absolute;
+    z-index: 3;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    max-width: 970px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: inherit;	
+}
+.entry-content.search-template-654 .searchandfilter ul {
+	margin: 0;
+}
+.search-template-654 input[type="text"] {
+    width: 100%;
+}
+.search-template-654 .page-cover-inside {
+    padding-top: 20px;
+    padding-top: 7rem;
+}
+.search-template-654 .page-header, .search-template-654 .entry-content {
+	padding-right: 0;
+    padding-left: 0;
+}
+.search-filter-results .no-results .page-content {
+	display: none;
+}
+.archive.category .archive-title {
+    margin-top: 0 !important;
+}
+.category-icons-wrap {
+    position: relative;
+    max-width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+}
+.category-icons-wrap a {
+
+}
+.category-icons-wrap img {
+	
+}
+.category-icons-wrap img.term_active {
+	
+}
+.has-post-thumbnail .page-cover {
+    width: 100%;
+    height: 100vh;
+}
 .gangdopepreto_avaliacao_img img {
 	margin-right: 5px;
 }
@@ -69,11 +188,17 @@ function add_custom_css() {
     /*font-size: 26px;*/
     font-size: 29px;
     padding-bottom: 30px;
+/*    display: flex; */
+    justify-content: center;
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
+.gangdopepreto_avaliacao_img {
+	margin-left: 7px;
+}
 .gang_field_title {
-	    margin-bottom: 10px;
+	margin-bottom: 10px;
     display: inline-block;
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .gangdopepreto_fields_wrap_2col {
     display: flex;
@@ -93,17 +218,23 @@ function add_custom_css() {
 }
 .gangdopepreto_fields_wrap_3col .gangdopepreto_field {
 	flex-grow: 1;
-    width: 33%;
+    /*width: 20%;*/
     text-align: center;
-    margin-bottom: 34px;	
+    margin-bottom: 34px;
+    padding-right: 5px;	
+}
+.gangdopepreto_fields_wrap p, .gangdopepreto_fields_wrap_left p {
+	font-size: 13px;
 }
 .num_rating {
     text-indent: -10000px;
     display: inline-block;
     border: 1px solid black;
     border-radius: 50%;
-    width: 14px;
-    height: 14px;
+    /*width: 14px;*/
+    /*height: 14px;*/
+    width: 9px;
+    height: 9px;    
     margin-right: 5px;
 }
 .num_rating.num_rating_black {
@@ -303,3 +434,100 @@ function add_custom_css() {
 	</style>
 	<?php
 }
+
+if ( ! function_exists( 'blink_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function blink_posted_on() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+
+	$posted_on = sprintf(
+		_x( '%s', 'post date', 'blink' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	$byline = sprintf(
+		_x( 'by %s', 'post author', 'blink' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"></span>';
+
+}
+endif;
+
+if ( ! function_exists( 'blink_entry_footer' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function blink_entry_footer() {
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'blink' ) );
+		if ( $categories_list && blink_categorized_blog() ) {
+/* original	printf( '<span class="cat-links">' . __( 'in %1$s', 'blink' ) . '</span>', $categories_list ); */
+			printf( '<span class="cat-links"></span>', $categories_list );
+		}
+	}
+
+	echo '<div>';
+
+	if ( ! post_password_required() && ( comments_open()  ) ) {
+		echo '<span class="comments-link">';
+		//comments_popup_link( __( 'Leave a comment', 'blink' ), __( '1 Comment', 'blink' ), __( '% Comments', 'blink' ) );
+		echo '</span>';
+	}
+
+	if ( is_single() ) {
+		edit_post_link( __( 'Edit', 'blink' ), '<span class="edit-link"> ', '</span>' );
+	}
+
+	echo '</div>';
+}
+endif;
+
+
+//Adding the Open Graph in the Language Attributes
+function add_opengraph_doctype( $output ) {
+        return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+    }
+add_filter('language_attributes', 'add_opengraph_doctype');
+ 
+//Lets add Open Graph Meta Info
+ 
+function insert_fb_in_head() {
+    global $post;
+    if ( !is_singular()) //if it is not a post or a page
+        return;
+        echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+        echo '<meta property="og:type" content="article"/>';
+        echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+        echo '<meta property="og:site_name" content="Gang do Pé Preto"/>';
+    if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
+        $default_image="http://gangdopepreto.com/wp-content/uploads/2018/02/gang-do-pe-preto.jpg"; //replace this with a default image on your server or an image in your media library
+        echo '<meta property="og:image" content="' . $default_image . '"/>';
+    }
+    else{
+        $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+        echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+    }
+    echo "
+";
+}
+add_action( 'wp_head', 'insert_fb_in_head', 5 );
+
+
+/* disable jetpack og */
+add_filter( 'jetpack_enable_open_graph', '__return_false' );

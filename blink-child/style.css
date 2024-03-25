@@ -16,7 +16,7 @@
  */
  
 /* font adjustments */
-.entry-content {font-size: 1.7rem!important; line-height: 1.6;}
+.entry-content {font-size: 1.8rem!important; line-height: 1.4;}
 .entry-title-primary { font-size: 5rem!important; line-height: 1;}
 .entry-subtitle { font-size: 2rem!important; font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif!important;}
 
@@ -61,7 +61,9 @@
 }
 .gangdopepreto_fields_wrap p, .gangdopepreto_fields_wrap_left p {
 	margin-bottom: 0;
-	font-size: 18px;
+	/*font-size: 15px;*/
+	font-size: 13px;
+	padding-top: 20px;
 }
 .clrf {
 	clear: both;
@@ -119,5 +121,108 @@
 	z-index: 999;
 }
 #fixedbutton img {
-	max-width: 50px:
+	max-width: 50px;
 }
+
+/* sharing */
+.sharedaddy {
+	padding-top: 30px;
+}
+
+/* footer */
+.gangdopepreto_footer {
+	font-size: 14px;
+	color: white;
+}
+.gangdopepreto_footer a {
+	font-size: 14px;
+	color: white;
+}
+.gangdopepreto_footer_credits {
+	font-size: 10px;
+	color: #999999;
+	text-align: left;
+}
+.gangdopepreto_footer_credits a {
+	font-size: 10px;
+	color: #999999;
+}
+
+/* archive page */
+.taxonomy-description p {
+	font-size: 16px;
+}
+
+/* slideshow */
+.slideshow-window {
+	background-color: white!important;
+	border: 0px solid black!important;
+	border-radius: 0px!important;
+}
+
+/* bullets */
+.entry-content ul li{
+list-style-image:url(http://gangdopepreto.com/wp-content/uploads/2018/02/obrigatorio.jpg);
+padding-left: 20px;
+}
+.entry-content ul {
+    margin: 10px 0;
+}
+.entry-content ol li{
+list-style-image:url(http://gangdopepreto.com/wp-content/uploads/2018/02/obrigatorio.jpg);
+padding-left: 20px;
+}
+
+/* contact form */
+input[type="text"] {
+	width: 100%;
+}
+input[type="email"] {
+	width: 100%;
+}
+
+
+/* mixed */
+.entry-title {
+    text-transform: none;
+}
+.site-logo-link {padding: 0px 0;}
+.yarpp-related {
+	border-top: 1px solid black;
+	padding-top: 40px;
+}
+.yarpp-related a {
+	font-weight: 400;
+	color: black;
+}
+.yarpp-related .entry-title-primary {
+	font-size: 2rem!important;
+}
+.yarpp-related .entry-subtitle {
+	font-size: 1.5rem!important;
+	margin-top: 0px;
+}
+.entry-content ol { margin: 0}
+.subscribe-label {text-transform: inherit;}
+.comment-subscription-form {text-transform: inherit;}
+
+body .jetpack-slideshow div.slideshow-controls a {
+	background-color: black !important;
+}
+body .jetpack-slideshow div.slideshow-controls a,
+body .jetpack-slideshow div.slideshow-controls a:hover {
+	border-color: white !important;
+}
+
+/* títulos página o gang */
+.page-id-39 .entry-subtitle { font-size: 2.3rem!important; }
+.page-id-39 .entry-title-primary { font-size: 5.4rem!important; }
+
+/* sombra main menu */
+.overlay-header .primary-menu a {
+text-shadow: 0px 0px 5px rgba(89, 89, 89, 1); }
+
+.menu-toggle {
+text-shadow: 0px 0px 5px rgba(89, 89, 89, 1); }
+
+

@@ -7,7 +7,7 @@
 	if($gangdopepreto_avaliacao): ?>
 		<div class="gangdopepreto_field gangdopepreto_avaliacao">
 			<p>
-				<b>Avaliação:</b>
+				<b>Avaliação</b></br>
 				<span class="gangdopepreto_avaliacao_img">
 					<?php $x = 1;
 						while ($x <= intval($gangdopepreto_avaliacao)):
@@ -22,125 +22,11 @@
 	<div class="gangdopepreto_fields_wrap_3col">
 
 		<?php
-		$gangdopepreto_minimo_noites = get_field('gangdopepreto_minimo_noites', $post->ID);
-		if($gangdopepreto_minimo_noites): ?>
-			<div class="gangdopepreto_field gangdopepreto_minimo_noites">
-				<p>
-					<b class="gang_field_title">Mínimo noites:</b>
-					<div class="rating">
-						<?php //echo $gangdopepreto_minimo_noites; ?>
-						<?php $x = 1; $count = 5;
-						while ($x <= $count):
-							if($x <=intval($gangdopepreto_minimo_noites)) {
-								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
-							} else {
-								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
-							}
-					    $x++;
-						endwhile; ?>
-					</div>
-				</p>
-			</div>
-		<?php endif; ?>
-
-		<?php
-		$gangdopepreto_preco_da_estadia = get_field('gangdopepreto_preco_da_estadia', $post->ID);
-		if($gangdopepreto_preco_da_estadia): ?>
-			<div class="gangdopepreto_field gangdopepreto_preco_da_estadia">
-				<p>
-					<b class="gang_field_title">Preço da Estadia:</b>
-					<!-- <span><?php echo $gangdopepreto_preco_da_estadia; ?></span> -->
-					<div class="rating">
-						<?php $x = 1; $count = 5;
-						while ($x <= $count):
-							if($x <=intval($gangdopepreto_preco_da_estadia)) {
-								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
-							} else {
-								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
-							}
-					    $x++;
-						endwhile; ?>
-					</div>					
-				</p>
-			</div>
-		<?php endif; ?>
-
-
-		<?php
-		$gangdopepreto_family_friendly = get_field('gangdopepreto_family_friendly', $post->ID);
-		if($gangdopepreto_family_friendly): ?>
-			<div class="gangdopepreto_field gangdopepreto_family_friendly">
-				<p>
-					<b class="gang_field_title">Family friendly:</b>
-					<!-- <span><?php echo $gangdopepreto_family_friendly; ?></span> -->
-					<div class="rating">
-						<?php $x = 1; $count = 5;
-						while ($x <= $count):
-							if($x <=intval($gangdopepreto_family_friendly)) {
-								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
-							} else {
-								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
-							}
-					    $x++;
-						endwhile; ?>
-					</div>					
-				</p>
-			</div>
-		<?php endif; ?>
-
-
-		<?php
-		$gangdopepreto_comes_e_bebes = get_field('gangdopepreto_comes_e_bebes', $post->ID);
-		if($gangdopepreto_comes_e_bebes): ?>
-			<div class="gangdopepreto_field gangdopepreto_comes_e_bebes">
-				<p>
-					<b class="gang_field_title">Comes e Bebes:</b>
-					<!-- <span><?php echo $gangdopepreto_comes_e_bebes; ?></span> -->
-					<div class="rating">
-						<?php $x = 1; $count = 5;
-						while ($x <= $count):
-							if($x <=intval( $gangdopepreto_comes_e_bebes)) {
-								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
-							} else {
-								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
-							}
-					    $x++;
-						endwhile; ?>
-					</div>
-				</p>
-			</div>
-		<?php endif; ?>
-
-
-		<?php
-		$gangdopepreto_paisagens = get_field('gangdopepreto_paisagens', $post->ID);
-		if($gangdopepreto_paisagens): ?>
-			<div class="gangdopepreto_field gangdopepreto_paisagens">
-				<p>
-					<b class="gang_field_title">Paisagens:</b>
-					<!-- <span><?php echo $gangdopepreto_paisagens; ?></span> -->
-					<div class="rating">
-						<?php $x = 1; $count = 5;
-						while ($x <= $count):
-							if($x <=intval( $gangdopepreto_paisagens)) {
-								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
-							} else {
-								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
-							}
-					    $x++;
-						endwhile; ?>
-					</div>
-				</p>
-			</div>
-		<?php endif; ?>
-
-
-		<?php
 		$gangdopepreto_pessoas = get_field('gangdopepreto_pessoas', $post->ID);
 		if($gangdopepreto_pessoas): ?>
 			<div class="gangdopepreto_field gangdopepreto_pessoas">
 				<p>
-					<b class="gang_field_title">Pessoas:</b>
+					<b class="gang_field_title">Impacto Emocional</b>
 					<!-- <span><?php echo $gangdopepreto_pessoas; ?></span> -->
 					<div class="rating">
 						<?php $x = 1; $count = 5;
@@ -157,6 +43,139 @@
 			</div>
 		<?php endif; ?>
 
+		<?php
+		$gangdopepreto_impacto_cultural = get_field('gangdopepreto_impacto_cultural', $post->ID);
+		if($gangdopepreto_impacto_cultural): ?>
+			<div class="gangdopepreto_field gangdopepreto_impacto_cultural">
+				<p>
+					<b class="gang_field_title">Impacto Cultural</b>
+					<!-- <span><?php echo $gangdopepreto_pessoas; ?></span> -->
+					<div class="rating">
+						<?php $x = 1; $count = 5;
+						while ($x <= $count):
+							if($x <=intval( $gangdopepreto_impacto_cultural)) {
+								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
+							} else {
+								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
+							}
+					    $x++;
+						endwhile; ?>
+					</div>
+				</p>
+			</div>
+		<?php endif; ?>
+
+		<?php
+		//$gangdopepreto_family_friendly = get_field('gangdopepreto_family_friendly', $post->ID);
+		$gangdopepreto_family_friendly = get_field('gangdopepreto_amigodasfamilias', $post->ID);
+		if($gangdopepreto_family_friendly): ?>
+			<div class="gangdopepreto_field gangdopepreto_family_friendly">
+				<p>
+					<b class="gang_field_title">Dimensão Familiar</b>
+					<!-- <span><?php echo $gangdopepreto_family_friendly; ?></span> -->
+					<div class="rating">
+						<?php $x = 1; $count = 5;
+						while ($x <= $count):
+							if($x <=intval($gangdopepreto_family_friendly)) {
+								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
+							} else {
+								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
+							}
+					    $x++;
+						endwhile; ?>
+					</div>					
+				</p>
+			</div>
+		<?php endif; ?>
+
+		<?php
+		$gangdopepreto_paisagens = get_field('gangdopepreto_paisagens', $post->ID);
+		if($gangdopepreto_paisagens): ?>
+			<div class="gangdopepreto_field gangdopepreto_paisagens">
+				<p>
+					<b class="gang_field_title">Paisagens do Caraças</b>
+					<!-- <span><?php echo $gangdopepreto_paisagens; ?></span> -->
+					<div class="rating">
+						<?php $x = 1; $count = 5;
+						while ($x <= $count):
+							if($x <=intval( $gangdopepreto_paisagens)) {
+								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
+							} else {
+								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
+							}
+					    $x++;
+						endwhile; ?>
+					</div>
+				</p>
+			</div>
+		<?php endif; ?>
+
+		<?php
+		$gangdopepreto_comes_e_bebes = get_field('gangdopepreto_comes_e_bebes', $post->ID);
+		if($gangdopepreto_comes_e_bebes): ?>
+			<div class="gangdopepreto_field gangdopepreto_comes_e_bebes">
+				<p>
+					<b class="gang_field_title">Comer de Chorar por Mais</b>
+					<!-- <span><?php echo $gangdopepreto_comes_e_bebes; ?></span> -->
+					<div class="rating">
+						<?php $x = 1; $count = 5;
+						while ($x <= $count):
+							if($x <=intval( $gangdopepreto_comes_e_bebes)) {
+								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
+							} else {
+								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
+							}
+					    $x++;
+						endwhile; ?>
+					</div>
+				</p>
+			</div>
+		<?php endif; ?>
+		
+		<?php
+		//$gangdopepreto_preco_da_estadia = get_field('gangdopepreto_preco_da_estadia', $post->ID);
+		$gangdopepreto_preco_da_estadia = get_field('gangdopepreto_quantogastas', $post->ID);
+		if($gangdopepreto_preco_da_estadia): ?>
+			<div class="gangdopepreto_field gangdopepreto_preco_da_estadia">
+				<p>
+					<b class="gang_field_title">E Isto Custa</b>
+					<!-- <span><?php echo $gangdopepreto_preco_da_estadia; ?></span> -->
+					<div class="rating">
+						<?php $x = 1; $count = 5;
+						while ($x <= $count):
+							if($x <=intval($gangdopepreto_preco_da_estadia)) {
+								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
+							} else {
+								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
+							}
+					    $x++;
+						endwhile; ?>
+					</div>					
+				</p>
+			</div>
+		<?php endif; ?>
+
+		<?php
+		$gangdopepreto_minimo_noites = get_field('gangdopepreto_minimo_noites', $post->ID);
+		if($gangdopepreto_minimo_noites): ?>
+			<div class="gangdopepreto_field gangdopepreto_minimo_noites">
+				<p>
+					<b class="gang_field_title">Mínimo Noites:</b>
+					<div class="rating">
+						<?php //echo $gangdopepreto_minimo_noites; ?>
+						<?php $x = 1; $count = 5;
+						while ($x <= $count):
+							if($x <=intval($gangdopepreto_minimo_noites)) {
+								echo '<span class="num_rating num_rating_black">'.$x.'</span>';
+							} else {
+								echo '<span class="num_rating num_rating_white">'.$x.'</span>';
+							}
+					    $x++;
+						endwhile; ?>
+					</div>
+				</p>
+			</div>
+		<?php endif; ?>
 
 	</div><!-- end 3col -->
 
@@ -180,7 +199,7 @@
 		if($gangdopepreto_nome_do_local): ?>
 			<div class="gangdopepreto_field gangdopepreto_nome_do_local">
 				<p>
-					<b>Nome do local:</b>
+					<b>Nome do Local:</b>
 					<span><?php echo $gangdopepreto_nome_do_local; ?></span>
 				</p>
 			</div>

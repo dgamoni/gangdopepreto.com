@@ -18,7 +18,7 @@ $social_links       = blink_get_social_links();
 
 <?php wp_footer(); ?>
 
-<a href="https://open.spotify.com/user/isaldanha/playlist/4A7W2OtDA9VD9vO6PqzJpv" target="_blank"><img src="http://gangdopepreto.com/wp-content/uploads/2018/02/spotify-playlist.png" id="fixedbutton" height="50" width="50" alt="Gang do Pé Preto Playlist"></a>
+<a href="https://open.spotify.com/user/isaldanha/playlist/4A7W2OtDA9VD9vO6PqzJpv" target="_blank"><img src="http://gangdopepreto.com/wp-content/uploads/2018/02/spotify-playlist.png" id="fixedbutton" height="40" width="40" alt="Gang do Pé Preto Playlist"></a>
 </body>
 </html>
 
