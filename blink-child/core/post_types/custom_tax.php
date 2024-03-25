@@ -31,6 +31,7 @@ function custom_tax_regiao() {
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => false,
+		//'show_ui'                    => true,
 		'show_admin_column'          => false,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => false,

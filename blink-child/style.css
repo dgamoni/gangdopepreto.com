@@ -14,13 +14,18 @@
 /**
  * Place Custom CSS Below this.
  */
-
-/* footer */
-.cprt {
-	font-size: 13px;
-	text-align: center;
-}
  
+/* font adjustments */
+.entry-content {font-size: 1.7rem!important; line-height: 1.6;}
+.entry-title-primary { font-size: 5rem!important; line-height: 1;}
+.entry-subtitle { font-size: 2rem!important; font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif!important;}
+
+
+/* page adjustments */
+.page-cover { margin-bottom: 3rem; }
+.archive-title { margin: 7rem 0 1.2rem 0!important; }
+.taxonomy-description p { text-align: center!important; margin-bottom: 80px!important; }
+
   
 .acf-map {
 	width: 100%;
@@ -33,12 +38,13 @@
 .acf-map img {
    max-width: inherit !important;
 }
-.footer-text-container {
+/* .footer-text-container {
 	text-align: center;
-}
+} */
 
 .gangdopepreto_fields_wrap {
 	margin-top: 40px;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .gangdopepreto_fields_wrap_left {
 	width: 25%;
@@ -61,10 +67,33 @@
 	clear: both;
 }
 
+/*single*/
+.sidebar-right {
+    margin-right: 4%;
+}
+.percent-blog, .percent-page {
+    width: 68%;
+    float: left;
+    position: relative;
+}
+.percent-sidebar {
+    width: 28%;
+    float: left;
+    position: relative;
+}
 /*search*/
 
+/*author widget*/
+#mks_author_widget-2 p { font-size: 15px; }
 
-@media only screen and (max-width: 766px) {
+/*testimonials*/
+.testimonials-widget-testimonial blockquote {font-size: 100%!important;  line-height: 100%;}
+.open-quote {font-size: 14px!important;}
+.close-quote {font-size: 14px!important;}
+.credit {font-size: 18px!important;}
+
+/*@media only screen and (max-width: 766px) {*/
+@media only screen and (max-width: 1024px) {
 	.gangdopepreto_fields_wrap_left {
 		width: 100%;
 		float:none;
@@ -74,4 +103,21 @@
 	.gangdopepreto_fields_wrap_right {
 		padding-left: 0px;
 	}
+}
+
+@media screen and (min-width: 800px) {
+.main-navigation {
+    vertical-align: top!important;
+}
+}
+
+/* icone spotify */
+#fixedbutton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+	z-index: 999;
+}
+#fixedbutton img {
+	max-width: 50px:
 }
