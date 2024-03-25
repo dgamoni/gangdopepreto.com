@@ -15,8 +15,13 @@
  * Place Custom CSS Below this.
  */
 
-
-
+/* footer */
+.cprt {
+	font-size: 13px;
+	text-align: center;
+}
+ 
+  
 .acf-map {
 	width: 100%;
 	height: 400px;
@@ -27,4 +32,46 @@
 /* fixes potential theme css conflict */
 .acf-map img {
    max-width: inherit !important;
+}
+.footer-text-container {
+	text-align: center;
+}
+
+.gangdopepreto_fields_wrap {
+	margin-top: 40px;
+}
+.gangdopepreto_fields_wrap_left {
+	width: 25%;
+	float:left;
+	display: flex;
+    flex-direction: column;
+    border-right: 1px solid;
+   /* padding-right: 40px;*/
+}
+.gangdopepreto_fields_wrap_right {
+	display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+.gangdopepreto_fields_wrap p, .gangdopepreto_fields_wrap_left p {
+	margin-bottom: 0;
+	font-size: 18px;
+}
+.clrf {
+	clear: both;
+}
+
+/*search*/
+
+
+@media only screen and (max-width: 766px) {
+	.gangdopepreto_fields_wrap_left {
+		width: 100%;
+		float:none;
+		border-right: none;
+    	/*padding-right: 0px;*/
+	}
+	.gangdopepreto_fields_wrap_right {
+		padding-left: 0px;
+	}
 }

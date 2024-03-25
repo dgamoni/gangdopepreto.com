@@ -1,6 +1,7 @@
 
 <div class="inner-block gangdopepreto_fields_wrap">
 
+<div class="gangdopepreto_fields_wrap_left">
 	<?php
 	$gangdopepreto_avaliacao = get_field('gangdopepreto_avaliacao', $post->ID);
 	if($gangdopepreto_avaliacao): ?>
@@ -14,78 +15,6 @@
 						     $x++;
 						endwhile; ?>
 				</span>
-			</p>
-		</div>
-	<?php endif; ?>
-	
-	<?php
-	$gangdopepreto_regiao = get_field('gangdopepreto_regiao', $post->ID);
-	if($gangdopepreto_regiao): ?>
-		<div class="gangdopepreto_field gangdopepreto_regiao">
-			<p>
-				<b>Região:</b>
-				<span><?php echo $gangdopepreto_regiao; ?></span>
-			</p>
-		</div>
-	<?php endif; ?>
-	
-	<?php
-	$gangdopepreto_localizacao = get_field('gangdopepreto_localizacao', $post->ID);
-	if( !empty($gangdopepreto_localizacao) ): ?>
-		<?php get_template_part( 'partials/map', 'fields' ); ?>
-	<?php endif; ?>
-
-	<?php
-	$gangdopepreto_nome_do_local = get_field('gangdopepreto_nome_do_local', $post->ID);
-	if($gangdopepreto_nome_do_local): ?>
-		<div class="gangdopepreto_field gangdopepreto_nome_do_local">
-			<p>
-				<b>Nome do local:</b>
-				<span><?php echo $gangdopepreto_nome_do_local; ?></span>
-			</p>
-		</div>
-	<?php endif; ?>
-
-	<?php
-	$gangdopepreto_morada = get_field('gangdopepreto_morada', $post->ID);
-	if($gangdopepreto_morada): ?>
-		<div class="gangdopepreto_field gangdopepreto_morada">
-			<p>
-				<b>Morada:</b>
-				<span><?php echo $gangdopepreto_morada; ?></span>
-			</p>
-		</div>
-	<?php endif; ?>
-
-	<?php
-	$gangdopepreto_telefone = get_field('gangdopepreto_telefone', $post->ID);
-	if($gangdopepreto_telefone): ?>
-		<div class="gangdopepreto_field gangdopepreto_telefone">
-			<p>
-				<b>Telefone:</b>
-				<span><?php echo $gangdopepreto_telefone; ?></span>
-			</p>
-		</div>
-	<?php endif; ?>
-
-	<?php
-	$gangdopepreto_email = get_field('gangdopepreto_e-mail', $post->ID);
-	if($gangdopepreto_email): ?>
-		<div class="gangdopepreto_field gangdopepreto_email">
-			<p>
-				<b>E-mail:</b>
-				<a href="mailto:<?php echo $gangdopepreto_email; ?>"><?php echo $gangdopepreto_email; ?></a>
-			</p>
-		</div>
-	<?php endif; ?>
-
-	<?php
-	$gangdopepreto_site = get_field('gangdopepreto_site', $post->ID);
-	if($gangdopepreto_site): ?>
-		<div class="gangdopepreto_field gangdopepreto_site">
-			<p>
-				<b>Site:</b>
-				<a href="<?php echo $gangdopepreto_site; ?>"><?php echo $gangdopepreto_site; ?></a>
 			</p>
 		</div>
 	<?php endif; ?>
@@ -159,7 +88,88 @@
 			</p>
 		</div>
 	<?php endif; ?>
-				
+
+</div><!-- end left -->
+
+<div class="gangdopepreto_fields_wrap_right">
+
+	<?php
+	$displaynone = true;
+	$gangdopepreto_regiao = get_field('gangdopepreto_regiao', $post->ID);
+	if($gangdopepreto_regiao && $displaynone): ?>
+		<div class="gangdopepreto_field gangdopepreto_regiao">
+			<p>
+				<b>Região:</b>
+				<span><?php echo $gangdopepreto_regiao; ?></span>
+			</p>
+		</div>
+	<?php endif; ?>
+	
+	<?php
+	$gangdopepreto_nome_do_local = get_field('gangdopepreto_nome_do_local', $post->ID);
+	if($gangdopepreto_nome_do_local): ?>
+		<div class="gangdopepreto_field gangdopepreto_nome_do_local">
+			<p>
+				<b>Nome do local:</b>
+				<span><?php echo $gangdopepreto_nome_do_local; ?></span>
+			</p>
+		</div>
+	<?php endif; ?>
+
+	<?php
+	$gangdopepreto_morada = get_field('gangdopepreto_morada', $post->ID);
+	if($gangdopepreto_morada): ?>
+		<div class="gangdopepreto_field gangdopepreto_morada">
+			<p>
+				<b>Morada:</b>
+				<span><?php echo $gangdopepreto_morada; ?></span>
+			</p>
+		</div>
+	<?php endif; ?>
+
+	<?php
+	$gangdopepreto_telefone = get_field('gangdopepreto_telefone', $post->ID);
+	if($gangdopepreto_telefone): ?>
+		<div class="gangdopepreto_field gangdopepreto_telefone">
+			<p>
+				<b>Telefone:</b>
+				<span><?php echo $gangdopepreto_telefone; ?></span>
+			</p>
+		</div>
+	<?php endif; ?>
+
+	<?php
+	$gangdopepreto_email = get_field('gangdopepreto_e-mail', $post->ID);
+	if($gangdopepreto_email): ?>
+		<div class="gangdopepreto_field gangdopepreto_email">
+			<p>
+				<b>E-mail:</b>
+				<a href="mailto:<?php echo $gangdopepreto_email; ?>"><?php echo $gangdopepreto_email; ?></a>
+			</p>
+		</div>
+	<?php endif; ?>
+
+	<?php
+	$gangdopepreto_site = get_field('gangdopepreto_site', $post->ID);
+	if($gangdopepreto_site): ?>
+		<div class="gangdopepreto_field gangdopepreto_site">
+			<p>
+				<b>Site:</b>
+				<a href="<?php echo $gangdopepreto_site; ?>"><?php echo $gangdopepreto_site; ?></a>
+			</p>
+		</div>
+	<?php endif; ?>
+
+</div>
+
+<div class="clrf"></div>
+
+	<?php
+	$gangdopepreto_localizacao = get_field('gangdopepreto_localizacao', $post->ID);
+	if( !empty($gangdopepreto_localizacao) ): ?>
+		<?php get_template_part( 'partials/map', 'fields' ); ?>
+	<?php endif; ?>
+		
 </div>
 <!-- end inner-block  gangdopepreto_fields_wrap -->
 

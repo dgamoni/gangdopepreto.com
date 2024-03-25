@@ -3,7 +3,7 @@
 
 	<div class="gangdopepreto_field gangdopepreto_localizacao">
 		<p>
-			<b>Localização:</b>
+			<!-- <b>Localização:</b> -->
 			<div class="acf-map">
 				<div class="marker" data-lat="<?php echo $gangdopepreto_localizacao['lat']; ?>" data-lng="<?php echo $gangdopepreto_localizacao['lng']; ?>"></div>
 			</div>
@@ -36,7 +36,7 @@
 		
 		// vars
 		var args = {
-			zoom		: 16,
+			zoom		: 8,
 			center		: new google.maps.LatLng(0, 0),
 			mapTypeId	: google.maps.MapTypeId.ROADMAP
 		};
@@ -145,7 +145,7 @@
 		{
 			// set center of map
 		    map.setCenter( bounds.getCenter() );
-		    map.setZoom( 16 );
+		    map.setZoom( 8 );
 		}
 		else
 		{
