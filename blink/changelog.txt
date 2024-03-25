@@ -1,0 +1,70 @@
+## 1.1.5
+* Fixed an issue with homepage layouts not using correct image size
+
+## 1.1.4
+* Added support for Custom Header
+* Added better compatibility with Jetpack's Content Options module
+* Fix Site title casing
+
+## 1.1.3
+* Fixed issues with Jetpack Content Options
+
+## 1.1.2
+* Applied optional border styles for archives and search results page
+
+## 1.1.1
+* Tweak post grid border styles for smaller screens
+
+## 1.1.0
+* Updated default body font to 'Rufina'
+* Added a setting to change post title casing
+* Added a setting to add borders around posts grids
+* Added a setting to change site header layout
+* Added additional option for a logo, when new site header is in use
+* Tweak submenu style for proper spacing
+
+## 1.0.10
+* Fixed an issue with Customizer throwing a warning
+* Updated Google Fonts library
+
+## 1.0.9
+* Added support for Jetpack's upcoming Content Options module
+* Updated Google Fonts library
+* Styling tweaks, eliminate scrolling/navigation issues in some cases
+
+## 1.0.8
+* Fix issue with sub menus caused since 1.0.7
+
+## 1.0.7
+* Ensures compability with WordPress 4.5
+* Fixed an issue with scrolling on phones
+* Updated Google fonts list
+* Updated Genericons library to v3.4.1
+
+## 1.0.6
+* Fixed an issue where post cover had a large height on mobile phones
+
+## 1.0.5
+* Fix: Remove calc css property, causes endless height issue on iOS7 and older
+
+## 1.0.4
+* Fix: Issue with post cover height where it ended up being huge in height
+* Fix: Mobile menu scrolling incorrectly as page scrolls
+* Tweak: Remove hover effects on post grid on single posts and pages
+* Update: Google fonts library list
+
+## 1.0.3
+* Fix: Search box not appearing correctly in Safari
+* Tweak: Remove CSS3 flexbox uses as it might cause some conflicts
+* Tweak: Footer widget section spacing
+* Tweak: Show post edit link on single page only
+
+## 1.0.2
+* New: Automatic updaters, requires a valid license
+* Fix: Issue with repetitive titles
+
+## 1.0.1
+* Fix syntax error on archive pages on some hosts
+
+## 1.0.0
+* Initial release
